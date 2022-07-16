@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
+  </head>
+  <body>
+    <h1>問1</h1>
+    <h2>参議院委員選挙において現時点で</br>議席獲得数を最も獲得している政党はどこでしょうか?</h2>
+    <button id="button-1a">立憲民主党</button>
+    <button id="button-1b">公明党</button>
+    <button id="button-1c">自由民主党</button>
+    <button id="button-1d">れいわ新選組</button>
+    <button id="button-1e">NHK党</button>
+    <div>答え</div>
+    <div id="answerDiv"></div>
+
+    <script>
+      // ボタンと答え欄の取得
+      const answer   = document.getElementById("answerDiv");
+      const button1a = document.getElementById("button-1a");
+      const button1b = document.getElementById("button-1b");
+      const button1c = document.getElementById("button-1c");
+      const button1d = document.getElementById("button-1d");
+      const button1e = document.getElementById("button-1e");
+
+      // アタリ・ハズレの関数
+      const miss = function () {
+        answer.textContent = "ハズレです!";
+      };
+      const hit = function () {
+        answer.textContent = "アタリです!";
+      };
+
+      // 各ボタンが押されたときの処理
+      button1a.onclick = miss;
+      button1b.onclick = miss;
+      button1c.onclick = hit;
+      button1d.onclick = miss;
+      button1e.onclick = miss;
+    </script>
+  </body>
+</html>
